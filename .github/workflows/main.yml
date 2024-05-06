@@ -1,14 +1,13 @@
+name: DEPLOY
 on:
   push:
-    branches: [ main ]
-name: 🚀 Deploy website on push
+    branches:
+    - master
 jobs:
-  web-deploy:
-    name: 🎉 Auto Deploy
+  deploy:
     runs-on: ubuntu-latest
     steps:
-    - name: 🚚 Get latest code
-      uses: actions/checkout@v2.3.2
+    - uses: actions/checkout@v3
     - name: rsync deployments
       uses: burnett01/rsync-deployments@7.0.1
       with:
