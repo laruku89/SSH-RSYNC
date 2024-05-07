@@ -18,4 +18,4 @@ jobs:
         remote_host: violaon@violaonlinestore.com
         #remote_user: violaon
         remote_pass: 12345
-        remote_key: ${{ secrets.DEPLOY_KEY }}
+        remote_key: ${{ secrets.AUT }}
