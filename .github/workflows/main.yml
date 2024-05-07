@@ -16,7 +16,6 @@ jobs:
         path: /
         remote_path: /home/violaon/public_html/test/
         remote_host: violaonlinestore.com
-        remote_user: violaon
-        remote_pass: 12345
-        remote_port: 2087
+        remote_user: root
+        remote_pass: 123456
         remote_key: ${{ secrets.DEPLOY_KEY }}
