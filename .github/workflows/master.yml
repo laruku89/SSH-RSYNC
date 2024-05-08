@@ -1,0 +1,20 @@
+name: DEPLOY
+on:
+  push:
+    branches:
+    - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: rsync deployments
+      uses: burnett01/rsync-deployments@7.0.1
+      with:
+        switches: -avzr --delete
+        path: home/
+        remote_path: /violaon/public_html/test/
+        remote_host: violaonlinestore.com
+        remote_user: violaon
+        remote_key: ${{ secrets.DEPLOY_KEY }}
