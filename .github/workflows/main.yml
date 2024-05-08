@@ -13,9 +13,9 @@ jobs:
       uses: burnett01/rsync-deployments@7.0.1
       with:
         switches: -avzr --delete
-        path: home/
-        remote_path: /violaon/public_html/
+        path: /
+        remote_path: /home/violaon/public_html/
         remote_host: 192.168.1.4
-        remote_user: violaon
-        remote_password: 12345
-        remote_key: ${{ secrets.DEPLOY_KEY }}
+        remote_user: root
+        remote_password: 123456
+        remote_key: ${{ secrets.KEY }}
