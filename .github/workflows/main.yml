@@ -1,21 +1,21 @@
-name: DEPLOY
 on:
   push:
-    branches:
-    - main
-
+    branches: [ main ]
+name: 🚀 Deploy website on push
 jobs:
-  deploy:
+  web-deploy:
+    name: 🎉 Auto Deploy
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
-    - name: rsync deployments
-      uses: burnett01/rsync-deployments@7.0.1
+    - name: 🚚 Get latest code
+      uses: actions/checkout@v2.3.2
+
+    - name: 📂 Sync files
+      uses: burnett01/rsync-deployments@4.1
       with:
-        switches: -avzr --delete
+        switches: -avzr --delete --exclude=".git" --exclude=".github"
         path: /
-        remote_path: /home/violaon/public_html/
-        remote_host: 192.168.1.4
-        remote_user: pc01
-        remote_password: 1234567
+        remote_path: ${{ secrets.DEPLOY_PATH }}
+        remote_host: ${{ secrets.DEPLOY_HOST }}
+        remote_user: ${{ secrets.DEPLOY_USER }}
         remote_key: ${{ secrets.DEPLOY_KEY }}
