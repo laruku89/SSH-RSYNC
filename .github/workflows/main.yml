@@ -15,6 +15,6 @@ jobs:
         switches: -avzr --delete --exclude=".git" --exclude=".github"
         path: /
         remote_path: /home/violaon/public_html/test/
-        remote_host: 192.168.1.4
+        remote_host: violaonlinestore.com/test
         remote_user: ${{ secrets.DEPLOY_USER }}
         remote_key: ${{ secrets.KEY }}
