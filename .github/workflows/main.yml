@@ -13,9 +13,10 @@ jobs:
     - name: 📂 Sync files
       uses: burnett01/rsync-deployments@4.1
       with:
-        switches: -avzr --delete --exclude=".git" --exclude=".github"
-        path: /
-        remote_path: ${{ secrets.DEPLOY_PATH }}
-        remote_host: ${{ secrets.DEPLOY_HOST }}
-        remote_user: ${{ secrets.DEPLOY_USER }}
+        switches: -avzr --delete
+        path: home/
+        remote_path: /violaon/public_html/
+        remote_host: violaonlinestore.com
+        remote_user: violaon
+        remote_password: ${{ secrets.DEPLOY_PASSWORD }}
         remote_key: ${{ secrets.KEY }}
