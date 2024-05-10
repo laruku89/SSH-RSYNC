@@ -9,9 +9,8 @@ jobs:
     steps:
     - name: 🚚 Get latest code
       uses: actions/checkout@v2.3.2
-
     - name: 📂 Sync files
-      uses: burnett01/rsync-deployments@4.0
+      uses: burnett01/rsync-deployments@4.1
       with:
         switches: -avzr --delete --exclude=".git" --exclude=".github"
         path: /
