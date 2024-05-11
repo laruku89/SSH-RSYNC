@@ -11,9 +11,9 @@ jobs:
     - name: rsync deployments
       uses: burnett01/rsync-deployments@7.0.1
       with:
-        switches: -avzr --delete
+        switches: -avzr --delete --rsh=ssh
         path: /
-        remote_path: /home/violaon/public_html/test
+        remote_path: violaon@192.168.1.6:/home/violaon/ /public_html/test/
         remote_host: violaonlinestore.com
         remote_user: violaon
         remote_key: ${{ secrets.KEY }}
