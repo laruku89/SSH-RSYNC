@@ -9,16 +9,13 @@ jobs:
     steps:
     - name: 🚚 Get latest code
       uses: actions/checkout@v2.3.2
-
-    - name: Run build command
-      run: npm run build && ls
       
     - name: 📂 Sync files
       uses: burnett01/rsync-deployments@4.1
       with:
         switches: -avzr --delete --exclude=".git" --exclude=".github"
         path: /
-        remote_path: violaon@192.168.1.4:/violaon/public_html/ /public_html/test/
+        remote_path: violaon@192.168.1.4:/home/violaon/ /public_html/test/
         remote_host: ${{ secrets.DEPLOY_HOST }}
         remote_user: ${{ secrets.DEPLOY_USER }}
         remote_key: ${{ secrets.KEY }}
