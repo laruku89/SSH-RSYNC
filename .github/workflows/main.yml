@@ -15,5 +15,4 @@ jobs:
         path: /
         remote_path: /home/violaon/public_html/test
         remote_host: 127.0.1.1
-        remote_user: violaon
         remote_key: ${{ secrets.KEY }}
