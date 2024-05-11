@@ -14,8 +14,8 @@ jobs:
       uses: burnett01/rsync-deployments@4.1
       with:
         switches: -avzr --delete --exclude=".git" --exclude=".github"
-        path: /
-        remote_path: /github/workspace/violaon@192.168.1.6:/home/violaon/public_html/test
+        path: /github/workspace/
+        remote_path: violaon@192.168.1.6:/home/violaon/public_html/test
         remote_host: ${{ secrets.DEPLOY_HOST }}
         remote_user: ${{ secrets.DEPLOY_USER }}
         remote_key: ${{ secrets.KEY }}
