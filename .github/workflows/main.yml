@@ -15,6 +15,6 @@ jobs:
         switches: -avzr --delete
         path: /
         remote_path: /home/violaon/public_html/test
-        remote_host: localhost.localdomain
-        remote_user: violaon
+        remote_host: server
+        remote_user: root
         remote_key: ${{ secrets.KEY }}
