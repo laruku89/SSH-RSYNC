@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Viola Online Store
 Web Static Bertemakan Toko Online 
 
@@ -24,6 +23,3 @@ product apa saja yang sedang di jual, dan yang lagi trend, bahkan product baru s
 2. Ekstrak zip (jika mendownload versi zip)
 3. Double Klik file index.html
 4. finish
-=======
-# SSH-RSYNC
->>>>>>> 2a4f3afbca8f3ca3a7974c5d31c8b5f12240635d
