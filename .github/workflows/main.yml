@@ -13,7 +13,7 @@ jobs:
       with:
         switches: -avzr --delete --rsh=ssh
         path: /
-        remote_path: violaon@192.168.1.6:/home/violaon/ /public_html/test/
-        remote_host: violaonlinestore.com
-        remote_user: violaon
+        remote_path: /var/www/html/public_html
+        remote_host: domainsaya.xyz
+        remote_user: pc01
         remote_key: ${{ secrets.KEY }}
